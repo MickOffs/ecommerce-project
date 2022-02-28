@@ -1,0 +1,86 @@
+.menu-icon {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  width: 120px;
+  height: 100%;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.row {
+  background-color: #a33846;
+  border-radius: 0px 0px 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  font-size: 30px;
+  display: flex;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+.nav a li {
+  transition: 0.2s ease;
+}
+
+.nav a li:hover {
+  transform: scale(0.9);
+}
+
+.cart-icon {
+  width: 60px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+  right: 60px;
+  top: 75px;
+  color: #8a2230;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 90px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart-icon {
+    width: 45px;
+  }
+  span {
+    right: 50px;
+    top: 65px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,28 @@
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: white;
+  margin: 20px;
+  padding: 1rem;
+  border-radius: 60px;
+}
+
+.shop-title {
+  background-color: white;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 40px 40px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 6vh;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -70px;
+}

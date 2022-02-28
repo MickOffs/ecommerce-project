@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import react from "react";
+import Header from "./Header/Header";
+import CartModal from "./Header/Modal";
+import { useState } from "react";
+import HeroSection from "./Main/HeroSection";
+import Product from "./Main/Product";
+import Cart from "./Main/Cart";
+import CartProvider from "./Context/CartProvider";
 
 function App() {
+  const [show, setShow] = useState(false);
+  const [cart, setCart] = useState(false);
+
+  const ShowCart = () => {
+    setCart(!cart);
+  };
+
+  const CloseCart = () => {
+    setCart(false);
+  };
+
+  const ShowMenu = () => {
+    setShow(!show);
+  };
+
+  const CloseMenu = () => {
+    setShow(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Header onClick={ShowMenu} onShowCart={ShowCart} />
+      {show && <CartModal onClick={CloseMenu} />}
+      <HeroSection />
+      <Product />
+      {cart && <Cart onClose={CloseCart} />}
+    </CartProvider>
   );
 }
 

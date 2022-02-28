@@ -1,0 +1,45 @@
+.modal {
+  background-color: #8a2230;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  transition: height 0.4s ease-in;
+  animation: switch 4s ease;
+}
+
+.nav-mobile a {
+  font-size: 30px;
+  display: flex;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  margin-top: 8px;
+}
+.nav-mobile a li {
+  transition: 0.2s ease;
+  background-color: white;
+  padding: 5px;
+  border-radius: 40px 40px 0px 40px;
+}
+.nav-mobile a li:hover {
+  transform: translateX(5px);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 40px;
+  right: 5px;
+  top: 5px;
+  position: absolute;
+}
+
+@keyframes switch {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
